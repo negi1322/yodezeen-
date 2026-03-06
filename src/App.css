@@ -1,0 +1,183 @@
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: font1 !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+body {
+  -ms-overflow-style: none;
+}
+
+@font-face {
+  font-family: font1;
+  src: url(/public/fonts/Helvetica.ttf);
+}
+
+.video-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.nav-bar {
+  position: fixed;
+  z-index: 1222;
+  width: 100%;
+  padding: 10px 20px;
+
+  & li {
+    font-weight: 500;
+  }
+}
+
+.nav-bar-2 {
+  background-color: black;
+}
+
+.main-home {
+  overflow: hidden;
+  height: 100vh;
+  width: -webkit-fill-available;
+}
+
+.nav-para {
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.upper-video-content {
+  position: absolute;
+  z-index: 12;
+  width: 100%;
+  bottom: 0;
+  padding: 20px;
+
+  & p {
+    color: white;
+  }
+
+  & button {
+    background-color: #d3d3d3 !important;
+    font-size: 15px;
+    color: black;
+  }
+}
+
+.sec-2 {
+  height: 100vh;
+}
+.main-content {
+  color: #2d2a2a;
+  font-size: 65px;
+  line-height: 100%;
+  width: 85%;
+  margin: auto;
+  font-weight: 600;
+}
+
+.sec-3 {
+  height: 100vh;
+  place-content: center;
+
+  & p {
+    color: #2d2a2a;
+    font-size: 19px;
+  }
+}
+
+.nav-hover {
+  position: absolute;
+  width: 100%;
+  z-index: 111;
+  background-color: white;
+  place-content: center;
+  text-align: center;
+}
+
+strong.text-capitalize.nav-para.text-white {
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.sec-4 {
+  height: 100vh;
+  background-image: url("https://cdn.yodezeen.com/014_c3fcbaf831.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  place-content: center;
+}
+
+.sec-5 {
+  height: 100vh;
+}
+
+.sec-5-center-content {
+  font-size: 50px;
+  line-height: normal;
+  font-weight: bolder;
+  color: #2d2a2a;
+}
+.sec-5-conent {
+  font-size: 270px;
+  font-weight: 700;
+  color: #2d2a2a;
+}
+
+.sec-6 {
+  height: 100vh;
+}
+.sec-6-main {
+  font-size: 200px;
+  font-weight: bolder;
+  color: #2d2a2a;
+  line-height: normal;
+  padding: 10px 80px;
+}
+.sec-6-p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #c3bcbc;
+  line-height: normal;
+}
+.book-image {
+  width: 500px;
+  height: auto;
+}
+
+.sec-7 {
+  height: 100vh;
+  padding-top: 300px;
+}
+.countrey-name {
+  cursor: pointer;
+  text-align: center;
+  font-size: 70px;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: normal;
+  color: #2d2a2a;
+}
+
+button.bg-black.rounded-circle {
+  height: 30px;
+  width: 30px;
+  background: #2D2A2A !important;
+}
+
+footer{
+  padding-top: 200px;
+  margin: auto;
+  text-align:center;
+}
