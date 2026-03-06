@@ -235,7 +235,7 @@ const Nav = () => {
           autoPlay
           muted
           playsInline
-          src="/public/videos/IMG_5700_1c0da35af8.mp4"
+          src="https://cdn.yodezeen.com/IMG_5700_1c0da35af8.mp4"
         ></video>
       </div>
     </>
