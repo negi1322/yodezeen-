@@ -56,8 +56,8 @@ const Nav = () => {
         }}
         className="nav-hover text-center"
         style={{ overflow: "hidden" }}
-        onMouseEnter={() => setopenNavItem(true)} // ← keep open when inside
-        onMouseLeave={() => setopenNavItem(false)} // ← close when leaving panel
+        onMouseEnter={() => setopenNavItem(true)}
+        onMouseLeave={() => setopenNavItem(false)}
       >
         <div
           className="services-background-image"

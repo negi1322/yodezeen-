@@ -2,8 +2,8 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <div className="w-50 mx-auto">
-          <p className="text-black">
+        <div className=" px-2 footer-content-container">
+          <p className="text-black ">
             Please, be informed, that the intellectual property rights to all
             the photos, designs and other materials on this Site belong to
             "YODEZEEN GROUP" LLC. You may request permission to use them by

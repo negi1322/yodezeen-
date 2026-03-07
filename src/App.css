@@ -26,12 +26,28 @@ body {
   src: url(/public/fonts/Helvetica-Bold.ttf);
 }
 
+@font-face {
+  font-family: fontBolder;
+  src: url(/public/fonts/Helvetica-BoldOblique.ttf);
+}
 .pointer {
   cursor: pointer;
 }
 
 .w-fit {
   width: fit-content !important;
+}
+
+.bold-text-content {
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+  font-family: fontBold;
+  text-transform: uppercase;
 }
 
 .video-container {
@@ -155,7 +171,7 @@ strong.text-capitalize.nav-para.text-white {
   color: #2d2a2a;
 }
 .sec-5-conent {
-  font-size: 270px;
+  font-size: 170px;
   font-weight: 700;
   color: #2d2a2a;
 }
@@ -255,7 +271,7 @@ strong.text-capitalize.nav-para.text-white {
 
 .sec-7 {
   height: 100vh;
-  padding-top: 300px;
+  padding-top: 100px;
 }
 .countrey-name {
   cursor: pointer;
@@ -275,11 +291,15 @@ button.bg-black.rounded-circle {
 }
 
 footer {
-  padding-top: 200px;
+  padding-top: 70px;
   margin: auto;
   text-align: center;
 }
 
+.footer-content-container {
+  width: 50%;
+  margin: auto;
+}
 /* Services section inside content */
 .services-background-image {
   background-repeat: no-repeat;
@@ -301,14 +321,59 @@ footer {
   word-spacing: normal;
   letter-spacing: -2px;
 }
+/* main detail section styling start here */
+.main-detail-page {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://cdn.yodezeen.com/extra_magnific_YJY_Rzy_Tlr1_Am_B_Ct9akp_K_magnific_y_Uxk_U_Th_A_Ej_It_RC_1w_Yuo_U_Screenshot_2024_09_13_094738_scaled_1_7644c3cd33.webp");
+}
 
+.main-detail-page-content {
+  width: 100%;
+  font-size: 170px;
+  text-align: center;
+  text-wrap: nowrap;
+  color: white;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: -14px;
+  font-family: fontBold;
+  font-weight: bold;
+  margin: auto;
+  padding-top: 153px;
+}
+.detail-service-content {
+  background-color: #e0e0e0;
+  padding: 200px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.detail-service-content h1 {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: clamp(80px, 8vw, 120px);
+  font-weight: 700;
+  line-height: 0.85;
+  color: #2d2a2a;
+  font-family: fontBolder;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+}
 /* Media query settlement  */
 @media screen and (max-width: 576px) {
   .sec-5-center-content {
     font-size: 35px !important;
   }
+  .footer-content-container {
+    width: 100%;
+  }
   .sec-5-conent {
-    font-size: 180px;
+    font-size: 120px;
   }
   .main-content {
     font-size: 37px;
@@ -321,5 +386,16 @@ footer {
   }
   .book-image {
     width: 300px;
+  }
+  .main-detail-page-content {
+    width: 100%;
+    white-space: normal;
+    word-break: break-word;
+    word-wrap: break-word;
+    font-size: 55px;
+    padding-top: 74%;
+  }
+  .bold-text-content {
+    font-size: 55px;
   }
 }

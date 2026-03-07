@@ -1,8 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import Center from "./Reused/Center";
 import Footer from "./Reused/Footer";
 import Nav from "./Reused/Nav";
+import { motion } from "framer-motion";
 
 const Service = () => {
+  const navigate = useNavigate();
   const servicepart = [
     {
       image:
@@ -43,8 +46,10 @@ const Service = () => {
           </div>
           <div className="row ">
             {servicepart?.map((i, key) => (
-              <div className="col-md-6">
-                <div
+              <motion.div className="col-md-6 pointer">
+                <motion.div
+                  whileHover={{ scale: 1.01 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
                   className="my-2 d-flex align-items-end justify-content-center"
                   style={{
                     backgroundImage: `url(${i?.image})`,
@@ -56,12 +61,15 @@ const Service = () => {
                 >
                   <div className="p-3 text-center">
                     <p className="text-white fs-2 fw-bold m-0 ">{i?.text}</p>
-                    <button className="rounded-pill p-2 text-black px-4 text-center mt-3 mt-md-0 text-capitalize ">
+                    <button
+                      onClick={() => navigate(`/detail/${i?.text}`)}
+                      className="rounded-pill p-2 text-black px-4 text-center mt-3 mt-md-0 text-capitalize "
+                    >
                       read more
                     </button>
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             ))}
           </div>
         </div>
