@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({ navcolor }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openNavItem, setopenNavItem] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -183,6 +183,7 @@ const Nav = () => {
                       "https://cdn.yodezeen.com/large_section_2_22f46a1652.webp",
                     )
                   }
+                  onClick={() => navigate("/about")}
                   onMouseLeave={() => setServiceImage("")}
                   className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
                 >
@@ -218,14 +219,14 @@ const Nav = () => {
           <div className="col-md-4">
             <ul className="list-unstyled d-none d-md-flex justify-content-between align-items-center py-3 m-0">
               <li
-                className="text-black fs-6"
+                className={`text-black fs-6 ${navcolor}`}
                 onMouseEnter={() => setopenNavItem(false)}
               >
                 Projects
               </li>
 
               <motion.li
-                className="text-black fs-6"
+                className={`text-black fs-6 ${navcolor}`}
                 onMouseEnter={() => {
                   setopenNavItem(true);
                   setservice(true);
@@ -246,7 +247,7 @@ const Nav = () => {
 
               <motion.li
                 onClick={() => navigate("/contact")}
-                className="text-black fs-6"
+                className={`text-black fs-6 ${navcolor}`}
                 onMouseEnter={() => setopenNavItem(false)}
                 whileHover={{
                   color: "ffff",
@@ -265,7 +266,7 @@ const Nav = () => {
               onClick={() => navigate("/")}
               onMouseEnter={() => setopenNavItem(false)}
               src="https://yodezeen.com/icons/logo.svg"
-              className="img-fluid pointer"
+              className="img-fluid pointer "
               alt="logo"
             />
           </div>
@@ -274,7 +275,7 @@ const Nav = () => {
             <ul className="list-unstyled d-none d-md-flex justify-content-between align-items-center py-3 m-0">
               <motion.li
                 onMouseLeave={() => setopenNavItem(false)}
-                className="text-black fs-6"
+                className={`text-black fs-6 ${navcolor}`}
                 onMouseEnter={() => {
                   setopenNavItem(true);
                   setAbout(true);
@@ -283,13 +284,13 @@ const Nav = () => {
                 About
               </motion.li>
               <li
-                className="text-black fs-6"
+                className={`text-black fs-6 ${navcolor}`}
                 onMouseEnter={() => setopenNavItem(false)}
               >
                 Career
               </li>
               <li
-                className="text-black fs-6"
+                className={`text-black fs-6 ${navcolor}`}
                 onMouseEnter={() => setopenNavItem(false)}
               >
                 Let's Talk

@@ -1,7 +1,14 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
-const Center = ({ center, left, right }) => {
+const Center = ({
+  center,
+  left,
+  right,
+  colorleft,
+  colorcenter,
+  colorright,
+}) => {
   const sec5Ref = useRef(null);
   // sec-5 scroll
   const { scrollYProgress: sec5Progress } = useScroll({
@@ -30,7 +37,7 @@ const Center = ({ center, left, right }) => {
           }}
         >
           <motion.h2
-            className="sec-5-conent text-uppercase"
+            className={`sec-5-conent text-uppercase ${colorleft}`}
             style={{
               x: weX,
               opacity: headingOpacity,
@@ -51,13 +58,15 @@ const Center = ({ center, left, right }) => {
               maxWidth: "400px",
             }}
           >
-            <p className="sec-5-center-content text-uppercase fw-bolder">
+            <p
+              className={`sec-5-center-content text-uppercase fw-bolder ${colorcenter}`}
+            >
               {center}
             </p>
           </motion.div>
 
           <motion.h2
-            className="sec-5-conent text-uppercase"
+            className={`sec-5-conent text-uppercase ${colorright}`}
             style={{
               x: doX,
               opacity: headingOpacity,

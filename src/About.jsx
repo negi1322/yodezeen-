@@ -1,6 +1,8 @@
 import Nav from "./Reused/Nav";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Center from "./Reused/Center";
+import Footer from "./Reused/Footer";
 
 const About = () => {
   const containerRef = useRef(null);
@@ -80,7 +82,7 @@ const About = () => {
 
   return (
     <>
-      <Nav />
+      <Nav navcolor={"text-white"} />
       <div ref={containerRef} className="about-bg about-scroll-container">
         <div ref={sectionRef} className="about-scroll-content">
           <div className="about-sticky-view position-sticky top-0">
@@ -243,6 +245,18 @@ const About = () => {
                   </div>
                 ))}
               </div>
+            </div>
+
+            <div className="col-12  ">
+              <Center
+                colorleft={"text-white"}
+                left={"let's"}
+                center={"about your project!"}
+                right={"Talk"}
+                colorright={"text-white"}
+                colorcenter={"text-white"}
+              />
+              <Footer  color={"text-white"}/>
             </div>
           </div>
         </div>
