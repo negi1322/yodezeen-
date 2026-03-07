@@ -50,14 +50,13 @@ function Home() {
             </button>
           </div>
         </div>
-        <div className="video-container">
-          <video
-            autoPlay
-            muted
-            playsInline
-            src="https://cdn.yodezeen.com/IMG_5700_1c0da35af8.mp4"
-          ></video>
-        </div>
+
+        <video
+          className="main-video"
+          autoPlay
+          muted
+          src="https://cdn.yodezeen.com/IMG_5700_1c0da35af8.mp4"
+        ></video>
       </div>
 
       <div ref={containerRef} style={{ height: "300vh" }}>

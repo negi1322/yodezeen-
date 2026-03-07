@@ -72,6 +72,11 @@ body {
   }
 }
 
+.main-video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 .nav-bar-2 {
   background-color: black;
 }

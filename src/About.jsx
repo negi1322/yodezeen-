@@ -256,7 +256,7 @@ const About = () => {
                 colorright={"text-white"}
                 colorcenter={"text-white"}
               />
-              <Footer  color={"text-white"}/>
+              <Footer color={"text-white"} />
             </div>
           </div>
         </div>
