@@ -57,6 +57,26 @@ function Home() {
           muted
           src="https://cdn.yodezeen.com/IMG_5700_1c0da35af8.mp4"
         ></video>
+
+        {/* Desktop video */}
+        <video
+          className="main-video d-none d-md-block"
+          autoPlay
+          muted
+          playsInline
+          loop
+          src="https://cdn.yodezeen.com/IMG_5700_1c0da35af8.mp4"
+        />
+
+        {/* Mobile video */}
+        <video
+          className="main-video d-block d-md-none"
+          autoPlay
+          muted
+          playsInline
+          loop
+          src="https://cdn.yodezeen.com/IMG_8853_7c58f414e3.mp4"
+        />
       </div>
 
       <div ref={containerRef} style={{ height: "300vh" }}>
