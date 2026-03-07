@@ -644,6 +644,39 @@ input:-webkit-autofill:active {
   color: white;
   font-family: fontBold;
 }
+
+.about-sec-2 {
+  background-color: #f2f0f0;
+  height: 100vh;
+  place-items: center;
+}
+.animated-about-image {
+  background-image: url("https://cdn.yodezeen.com/extra_Foto_22_01_25_15_53_43_14_a7d04c026a.webp");
+  background-repeat: no-repeat;
+  width: 320px;
+  height: 360px;
+  background-position: center;
+  background-size: cover;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+/* Parent defines the row track sizes */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+}
+
+.team-subgrid {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+}
+.member-image {
+  height: 400px;
+  overflow: hidden;
+}
 /* Media query settlement  */
 @media screen and (max-width: 576px) {
   .sec-5-center-content {
@@ -689,5 +722,20 @@ input:-webkit-autofill:active {
   .news-container {
     height: 100vh;
     overflow: unset;
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .member-image {
+    height: 300px;
+  }
+  .about-content {
+    font-size: 70px;
+  }
+  p.w-25.mx-auto.text-center.fs-5.text-white {
+    width: 100% !important;
+  }
+  .animated-about-image {
+    bottom: -3rem;
   }
 }

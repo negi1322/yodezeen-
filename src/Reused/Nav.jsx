@@ -377,6 +377,8 @@ const Nav = () => {
                     navigate("/contact");
                   } else if (item === "News") {
                     navigate("/news");
+                  } else if (item === "About") {
+                    navigate("/about");
                   }
                 }}
                 key={item}
