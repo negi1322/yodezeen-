@@ -792,4 +792,10 @@ h1.about-content.text-black.fs-1 {
     width: 100% !important;
     letter-spacing: 2px;
   }
+  h1.about-content.text-black.fs-1 {
+    font-size: 35px !important;
+  }
+  .sec-2-career{
+    padding: 50px;
+  }
 }

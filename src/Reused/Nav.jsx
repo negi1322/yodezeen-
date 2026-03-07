@@ -274,12 +274,12 @@ const Nav = ({ navcolor }) => {
           <div className="col-md-4">
             <ul className="list-unstyled d-none d-md-flex justify-content-between align-items-center py-3 m-0">
               <motion.li
-                              whileHover={{
-                                color: "ffff",
-                                fontWeight: "bold",
-                                scale: 1.04,
-                                borderBottom: "2px solid white",
-                              }}
+                whileHover={{
+                  color: "ffff",
+                  fontWeight: "bold",
+                  scale: 1.04,
+                  borderBottom: "2px solid white",
+                }}
                 onMouseLeave={() => setopenNavItem(false)}
                 className={`text-black fs-6 ${navcolor}`}
                 onMouseEnter={() => {
@@ -393,6 +393,8 @@ const Nav = ({ navcolor }) => {
                     navigate("/news");
                   } else if (item === "About") {
                     navigate("/about");
+                  } else if (item === "Career") {
+                    navigate("/career");
                   }
                 }}
                 key={item}

@@ -139,7 +139,8 @@ const Career = () => {
         style={{
           backgroundImage: `url(${jobimage})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "top , center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <div className="d-flex gap-2 flex-column">
