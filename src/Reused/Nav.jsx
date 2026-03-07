@@ -155,7 +155,6 @@ const Nav = () => {
                 Projects
               </li>
 
-              {/* ✅ Only Services opens the dropdown */}
               <li
                 className="text-black fs-6"
                 onMouseEnter={() => setopenNavItem(true)}
@@ -279,6 +278,11 @@ const Nav = () => {
               "Let's Talk",
             ].map((item) => (
               <li
+                onClick={() => {
+                  if (item === "Services") {
+                    navigate("/service");
+                  }
+                }}
                 key={item}
                 className="text-capitalize nav-para text-white py-2"
                 style={{ borderBottom: "1px solid #eee" }}
