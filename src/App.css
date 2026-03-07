@@ -795,7 +795,20 @@ h1.about-content.text-black.fs-1 {
   h1.about-content.text-black.fs-1 {
     font-size: 35px !important;
   }
-  .sec-2-career{
+  .sec-2-career {
     padding: 50px;
+  }
+  .countrey-name {
+    cursor: pointer;
+    text-align: left;
+    font-size: 46px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: normal;
+    color: #2d2a2a;
+    height: 9vh;
+    overflow: hidden;
+    padding: 0px 0px 0px 20px;
   }
 }
