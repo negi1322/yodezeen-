@@ -198,7 +198,7 @@ function Home() {
       {/* Sec -7  */}
       <section className="sec-7">
         <div className="d-flex flex-column">
-          <motion.h3 whileHover={{ height: "100%" }} className="countrey-name">
+          <motion.h3 whileHover={{ height: "100%" }}  className="countrey-name">
             London <span className="fs-6 text-start fw-light">12:09pm</span>
             <div className="d-flex flex-column justify-content-between">
               <p className="text-black fw-light fs-6 m-2">
