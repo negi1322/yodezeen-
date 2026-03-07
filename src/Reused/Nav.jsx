@@ -8,7 +8,8 @@ const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
   const [serviceImage, setServiceImage] = useState(false);
   const [navHidden, setNavHidden] = useState(false);
-
+  const [service, setservice] = useState(false);
+  const [about, setAbout] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -59,84 +60,152 @@ const Nav = () => {
         onMouseEnter={() => setopenNavItem(true)}
         onMouseLeave={() => setopenNavItem(false)}
       >
-        <div
-          className="services-background-image"
-          style={{
-            backgroundImage: `url(${serviceImage})`,
-          }}
-        >
-          <div className="container">
-            <div className="d-flex flex-column gap-1">
-              <span
-                onMouseEnter={() =>
-                  setServiceImage(
-                    "https://cdn.yodezeen.com/extra_magnific_YJY_Rzy_Tlr1_Am_B_Ct9akp_K_magnific_y_Uxk_U_Th_A_Ej_It_RC_1w_Yuo_U_Screenshot_2024_09_13_094738_scaled_1_7644c3cd33.webp",
-                  )
-                }
-                onMouseLeave={() => setServiceImage("")}
-                className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
-              >
-                Hotels & Resorts
-              </span>
-              <span
-                onMouseEnter={() =>
-                  setServiceImage(
-                    "https://cdn.yodezeen.com/extra_3620s_GULFSTREAM_EXTERIOR_FINAL_16_04_9fd8c7a0dd.webp",
-                  )
-                }
-                onMouseLeave={() => setServiceImage("")}
-                className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
-              >
-                Private jets
-              </span>
-              <span
-                onMouseEnter={() =>
-                  setServiceImage(
-                    "https://cdn.yodezeen.com/extra_1_6_1e215fe69e.webp",
-                  )
-                }
-                onMouseLeave={() => setServiceImage("")}
-                className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
-              >
-                Public & Space
-              </span>
-              <span
-                onMouseEnter={() =>
-                  setServiceImage(
-                    "https://cdn.yodezeen.com/extra_ARCH_8sss6_bd57a53d88.webp",
-                  )
-                }
-                onMouseLeave={() => setServiceImage("")}
-                className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
-              >
-                Residence
-              </span>
-              <span
-                onMouseEnter={() =>
-                  setServiceImage(
-                    "https://cdn.yodezeen.com/extra_ely_bsc_photography_Eleonora_Boscarelli_043_1_1_8867e1f0e6.webp",
-                  )
-                }
-                onMouseLeave={() => setServiceImage("")}
-                className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
-              >
-                Restaurats
-              </span>
-              <span
-                onMouseEnter={() =>
-                  setServiceImage(
-                    "https://cdn.yodezeen.com/large_yacht_preview3_e349d25a7b.jpg",
-                  )
-                }
-                onMouseLeave={() => setServiceImage("")}
-                className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
-              >
-                Yachts
-              </span>
+        {service ? (
+          <div
+            className="services-background-image"
+            style={{
+              backgroundImage: `url(${serviceImage})`,
+            }}
+          >
+            <div className="container">
+              <div className="d-flex flex-column gap-1">
+                <span
+                  onMouseEnter={() =>
+                    setServiceImage(
+                      "https://cdn.yodezeen.com/extra_magnific_YJY_Rzy_Tlr1_Am_B_Ct9akp_K_magnific_y_Uxk_U_Th_A_Ej_It_RC_1w_Yuo_U_Screenshot_2024_09_13_094738_scaled_1_7644c3cd33.webp",
+                    )
+                  }
+                  onMouseLeave={() => setServiceImage("")}
+                  className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
+                >
+                  Hotels & Resorts
+                </span>
+                <span
+                  onMouseEnter={() =>
+                    setServiceImage(
+                      "https://cdn.yodezeen.com/extra_3620s_GULFSTREAM_EXTERIOR_FINAL_16_04_9fd8c7a0dd.webp",
+                    )
+                  }
+                  onMouseLeave={() => setServiceImage("")}
+                  className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
+                >
+                  Private jets
+                </span>
+                <span
+                  onMouseEnter={() =>
+                    setServiceImage(
+                      "https://cdn.yodezeen.com/extra_1_6_1e215fe69e.webp",
+                    )
+                  }
+                  onMouseLeave={() => setServiceImage("")}
+                  className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
+                >
+                  Public & Space
+                </span>
+                <span
+                  onMouseEnter={() =>
+                    setServiceImage(
+                      "https://cdn.yodezeen.com/extra_ARCH_8sss6_bd57a53d88.webp",
+                    )
+                  }
+                  onMouseLeave={() => setServiceImage("")}
+                  className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
+                >
+                  Residence
+                </span>
+                <span
+                  onMouseEnter={() =>
+                    setServiceImage(
+                      "https://cdn.yodezeen.com/extra_ely_bsc_photography_Eleonora_Boscarelli_043_1_1_8867e1f0e6.webp",
+                    )
+                  }
+                  onMouseLeave={() => setServiceImage("")}
+                  className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
+                >
+                  Restaurats
+                </span>
+                <span
+                  onMouseEnter={() =>
+                    setServiceImage(
+                      "https://cdn.yodezeen.com/large_yacht_preview3_e349d25a7b.jpg",
+                    )
+                  }
+                  onMouseLeave={() => setServiceImage("")}
+                  className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
+                >
+                  Yachts
+                </span>
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          ""
+        )}
       </motion.div>
+
+      {about ? (
+        <motion.div
+          animate={{
+            height: openNavItem ? "100vh" : "0vh",
+          }}
+          transition={{
+            duration: 0.6,
+            ease: [0.76, 0, 0.24, 1],
+          }}
+          className="nav-hover text-center"
+          style={{ overflow: "hidden" }}
+          onMouseEnter={() => setopenNavItem(true)}
+          onMouseLeave={() => setopenNavItem(false)}
+        >
+          <div
+            className="services-background-image"
+            style={{
+              backgroundImage: `url(${serviceImage})`,
+            }}
+          >
+            <div className="container">
+              <div className="d-flex flex-column gap-1 w-100  align-items-end ">
+                <span
+                  onMouseEnter={() =>
+                    setServiceImage(
+                      "https://cdn.yodezeen.com/large_image_79_iz_376_9b2b51e2d0.jpg",
+                    )
+                  }
+                  onClick={() => navigate("/news")}
+                  onMouseLeave={() => setServiceImage("")}
+                  className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
+                >
+                  News
+                </span>
+                <span
+                  onMouseEnter={() =>
+                    setServiceImage(
+                      "https://cdn.yodezeen.com/large_section_2_22f46a1652.webp",
+                    )
+                  }
+                  onMouseLeave={() => setServiceImage("")}
+                  className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
+                >
+                  About
+                </span>
+                <span
+                  onMouseEnter={() =>
+                    setServiceImage(
+                      "https://cdn.yodezeen.com/large_Y_850_bc9a4645cb.jpg",
+                    )
+                  }
+                  onMouseLeave={() => setServiceImage("")}
+                  className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
+                >
+                  Team
+                </span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      ) : (
+        ""
+      )}
 
       <div
         className={"nav-bar"}
@@ -155,22 +224,39 @@ const Nav = () => {
                 Projects
               </li>
 
-              <li
+              <motion.li
                 className="text-black fs-6"
-                onMouseEnter={() => setopenNavItem(true)}
-                onMouseLeave={() => setopenNavItem(false)}
+                onMouseEnter={() => {
+                  setopenNavItem(true);
+                  setservice(true);
+                }}
+                onMouseLeave={() => {
+                  setopenNavItem(false);
+                }}
                 onClick={() => navigate("/service")}
+                whileHover={{
+                  color: "ffff",
+                  fontWeight: "bold",
+                  scale: 1.04,
+                  borderBottom: "2px solid white",
+                }}
               >
                 Services
-              </li>
+              </motion.li>
 
-              <li
+              <motion.li
                 onClick={() => navigate("/contact")}
                 className="text-black fs-6"
                 onMouseEnter={() => setopenNavItem(false)}
+                whileHover={{
+                  color: "ffff",
+                  fontWeight: "bold",
+                  scale: 1.04,
+                  borderBottom: "2px solid white",
+                }}
               >
                 Contact
-              </li>
+              </motion.li>
             </ul>
           </div>
 
@@ -186,12 +272,16 @@ const Nav = () => {
 
           <div className="col-md-4">
             <ul className="list-unstyled d-none d-md-flex justify-content-between align-items-center py-3 m-0">
-              <li
+              <motion.li
+                onMouseLeave={() => setopenNavItem(false)}
                 className="text-black fs-6"
-                onMouseEnter={() => setopenNavItem(false)}
+                onMouseEnter={() => {
+                  setopenNavItem(true);
+                  setAbout(true);
+                }}
               >
                 About
-              </li>
+              </motion.li>
               <li
                 className="text-black fs-6"
                 onMouseEnter={() => setopenNavItem(false)}
@@ -275,6 +365,7 @@ const Nav = () => {
               "Services",
               "Contact",
               "About",
+              "News",
               "Career",
               "Let's Talk",
             ].map((item) => (
@@ -282,8 +373,10 @@ const Nav = () => {
                 onClick={() => {
                   if (item === "Services") {
                     navigate("/service");
-                  }else if(item === "Contact"){
-                    navigate("/contact")
+                  } else if (item === "Contact") {
+                    navigate("/contact");
+                  } else if (item === "News") {
+                    navigate("/news");
                   }
                 }}
                 key={item}

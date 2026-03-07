@@ -8,13 +8,15 @@ import Home from "./App";
 import Service from "./Service";
 import DetailService from "./DetailService";
 import ConnectPage from "./Contact";
+import News from "./News";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home />} />
       <Route path="/service" element={<Service />} />
+      <Route path="/" element={<Home />} />
       <Route path="/contact" element={<ConnectPage />} />
+      <Route path="/news" element={<News />} />
       <Route path="/detail/:service" element={<DetailService />} />
     </Routes>
   </BrowserRouter>,

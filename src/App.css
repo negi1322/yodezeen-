@@ -580,6 +580,33 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: #000;
   background-color: white !important;
 }
+
+/* News section stlign start here */
+.news-container {
+  height: 100vh;
+  overflow: hidden;
+}
+.news-image-container {
+  height: 100vh;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.news-image-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 100px;
+  overflow: scroll;
+  height: 100vh;
+
+  & div {
+    width: 200px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+}
 /* Media query settlement  */
 @media screen and (max-width: 576px) {
   .sec-5-center-content {
@@ -621,5 +648,9 @@ input:-webkit-autofill:active {
   }
   .connect-big-line {
     font-size: clamp(3rem, 16vw, 7rem);
+  }
+  .news-container {
+    height: 100vh;
+    overflow: unset;
   }
 }
