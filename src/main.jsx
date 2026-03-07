@@ -7,12 +7,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./App";
 import Service from "./Service";
 import DetailService from "./DetailService";
+import ConnectPage from "./Contact";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/service" element={<Service />} />
+      <Route path="/contact" element={<ConnectPage />} />
       <Route path="/detail/:service" element={<DetailService />} />
     </Routes>
   </BrowserRouter>,

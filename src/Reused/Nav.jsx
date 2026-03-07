@@ -165,6 +165,7 @@ const Nav = () => {
               </li>
 
               <li
+                onClick={() => navigate("/contact")}
                 className="text-black fs-6"
                 onMouseEnter={() => setopenNavItem(false)}
               >
@@ -219,7 +220,7 @@ const Nav = () => {
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="border-0 bg-transparent p-0"
+            className="border-0 bg-transparent p-0 "
             aria-label="Toggle menu"
             style={{ cursor: "pointer" }}
           >
@@ -281,6 +282,8 @@ const Nav = () => {
                 onClick={() => {
                   if (item === "Services") {
                     navigate("/service");
+                  }else if(item === "Contact"){
+                    navigate("/contact")
                   }
                 }}
                 key={item}

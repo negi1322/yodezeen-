@@ -364,6 +364,222 @@ footer {
   text-transform: uppercase;
   letter-spacing: -4px;
 }
+
+/* contact form styling */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;800&family=Barlow:wght@300;400&display=swap");
+
+/* ── Overlay ── */
+.connect-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #edecea;
+  z-index: 1000;
+  overflow-y: auto;
+  font-family: "Barlow", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Close Button ── */
+.connect-close-btn {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.5rem;
+  background: transparent;
+  border: 1px solid #999;
+  padding: 6px 16px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: #222;
+  z-index: 10;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  transition:
+    background 0.25s,
+    color 0.25s;
+}
+.connect-close-btn:hover {
+  background: #222;
+  color: #fff;
+}
+
+/* ── Big LET'S CONNECT text ── */
+.connect-big-text {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  line-height: 0.88;
+  padding: 0 0 0.1em 0.08em;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+.connect-big-line {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: clamp(4rem, 11vw, 10rem);
+  color: #111;
+  display: block;
+  line-height: 1;
+}
+
+/* ── Form Wrapper ── */
+.connect-form-wrapper {
+  margin-left: auto;
+  width: 100%;
+  max-width: 720px;
+  padding: 5rem 3rem 10rem 2rem;
+  z-index: 2;
+  position: relative;
+}
+
+/* ── Heading ── */
+.connect-heading {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: #111;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+/* ── Form ── */
+.connect-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ── Field Group ── */
+.connect-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ── Labels ── */
+.connect-label-red,
+.connect-label-gray {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Barlow Condensed", sans-serif;
+}
+.connect-label-red {
+  color: #c00;
+}
+.connect-label-gray {
+  color: #888;
+  font-weight: 400;
+}
+
+/* ── Error Message ── */
+.connect-error-msg {
+  color: #c00;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+/* ── Inputs & Textarea ── */
+.connect-input,
+.connect-textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #222;
+  padding: 8px 0;
+  font-size: 15px;
+  color: #111;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+.connect-input:focus,
+.connect-textarea:focus {
+  outline: none;
+  border-bottom-color: #555;
+}
+.connect-input.error,
+.connect-textarea.error {
+  border-bottom-color: #c00;
+}
+.connect-textarea {
+  resize: none;
+  padding-top: 8px;
+}
+
+/* ── Phone Row ── */
+.connect-phone-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+}
+.connect-code-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 120px;
+  flex-shrink: 0;
+}
+
+/* ── Select ── */
+.connect-select {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #222;
+  padding: 8px 0;
+  font-size: 14px;
+  color: #111;
+  font-family: "Barlow", sans-serif;
+  cursor: pointer;
+  width: 100%;
+  appearance: auto;
+}
+.connect-select:focus {
+  outline: none;
+}
+
+/* ── Submit Button ── */
+.connect-submit-btn {
+  align-self: flex-start;
+  margin-top: 1rem;
+  background: transparent;
+  border: 1px solid #222;
+  padding: 12px 32px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  color: #111;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition:
+    background 0.25s,
+    color 0.25s;
+}
+.connect-submit-btn:hover {
+  background: #222;
+  color: #fff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #000;
+  background-color: white !important;
+}
 /* Media query settlement  */
 @media screen and (max-width: 576px) {
   .sec-5-center-content {
@@ -387,6 +603,7 @@ footer {
   .book-image {
     width: 300px;
   }
+
   .main-detail-page-content {
     width: 100%;
     white-space: normal;
@@ -397,5 +614,12 @@ footer {
   }
   .bold-text-content {
     font-size: 55px;
+  }
+  .connect-form-wrapper {
+    padding: 5rem 1.5rem 8rem;
+    margin-left: 0;
+  }
+  .connect-big-line {
+    font-size: clamp(3rem, 16vw, 7rem);
   }
 }
