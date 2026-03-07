@@ -198,13 +198,90 @@ function Home() {
       {/* Sec -7  */}
       <section className="sec-7">
         <div className="d-flex flex-column">
-          <h3 className="countrey-name">London</h3>
-          <h3 className="countrey-name">miammi</h3>
-          <h3 className="countrey-name">dubai</h3>
-          <h3 className="countrey-name">new york</h3>
-          <h3 className="countrey-name">warsaw</h3>
-          <h3 className="countrey-name">kyiv</h3>
-          <h3 className="countrey-name">milan</h3>
+          <motion.h3 whileHover={{ height: "100%" }} className="countrey-name">
+            London <span className="fs-6 text-start fw-light">12:09pm</span>
+            <div className="d-flex flex-column justify-content-between">
+              <p className="text-black fw-light fs-6 m-2">
+                <span className="me-2">P.</span> +44 73 8888 9977
+              </p>
+              <p className="text-black fw-light fs-6 m-2">
+                <span className="me-2">A.</span> 70 Brompton Road, London, SW3
+                1ER, UK
+              </p>
+            </div>
+          </motion.h3>
+          <motion.h3 whileHover={{ height: "100%" }} className="countrey-name">
+            miammi <span className="fs-6 text-start fw-light">7:00pm</span>
+            <div className="d-flex flex-column justify-content-between">
+              <p className="text-black fw-light fs-6 m-2">
+                <span className="me-2">P.</span> +44 73 8888 9977
+              </p>
+              <p className="text-black fw-light fs-6 m-2">
+                <span className="me-2">A.</span> 70 Brompton Road, London, SW3
+                1ER, UK
+              </p>
+            </div>
+          </motion.h3>
+          <motion.h3 whileHover={{ height: "100%" }} className="countrey-name">
+            dubai <span className="fs-6 text-start fw-light">12:09pm</span>
+            <div className="d-flex flex-column justify-content-between">
+              <p className="text-black fw-light fs-6 m-2">
+                <span className="me-2">P.</span> +44 73 8888 9977
+              </p>
+              <p className="text-black fw-light fs-6 m-2">
+                <span className="me-2">A.</span> 70 Brompton Road, London, SW3
+                1ER, UK
+              </p>
+            </div>
+          </motion.h3>
+          <motion.h3 whileHover={{ height: "100%" }} className="countrey-name">
+            new york <span className="fs-6 text-start fw-light">12:09pm</span>
+            <div className="d-flex flex-column justify-content-between">
+              <p className="text-black fw-light fs-6 m-2">
+                <span className="me-2">P.</span> +44 73 8888 9977
+              </p>
+              <p className="text-black fw-light fs-6 m-2">
+                <span className="me-2">A.</span> 70 Brompton Road, London, SW3
+                1ER, UK
+              </p>
+            </div>
+          </motion.h3>
+          <motion.h3 whileHover={{ height: "100%" }} className="countrey-name">
+            warsaw <span className="fs-6 text-start fw-light">8:30pm</span>
+            <div className="d-flex flex-column justify-content-between">
+              <p className="text-black fw-light fs-6 m-2">
+                <span className="me-2">P.</span> +44 73 8888 9977
+              </p>
+              <p className="text-black fw-light fs-6 m-2">
+                <span className="me-2">A.</span> 70 Brompton Road, London, SW3
+                1ER, UK
+              </p>
+            </div>
+          </motion.h3>
+          <motion.h3 whileHover={{ height: "100%" }} className="countrey-name">
+            kyiv <span className="fs-6 text-start fw-light">12:09pm</span>
+            <div className="d-flex flex-column justify-content-between">
+              <p className="text-black fw-light fs-6 m-2">
+                <span className="me-2">P.</span> +44 73 8888 9977
+              </p>
+              <p className="text-black fw-light fs-6 m-2">
+                <span className="me-2">A.</span> 70 Brompton Road, London, SW3
+                1ER, UK
+              </p>
+            </div>
+          </motion.h3>
+          <motion.h3 whileHover={{ height: "100%" }} className="countrey-name">
+            milan <span className="fs-6 text-start fw-light">10:00pm</span>
+            <div className="d-flex flex-column justify-content-between">
+              <p className="text-black fw-light fs-6 m-2">
+                <span className="me-2">P.</span> +44 73 8888 9977
+              </p>
+              <p className="text-black fw-light fs-6 m-2">
+                <span className="me-2">A.</span> 70 Brompton Road, London, SW3
+                1ER, UK
+              </p>
+            </div>
+          </motion.h3>
         </div>
       </section>
 

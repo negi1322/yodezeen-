@@ -287,8 +287,9 @@ strong.text-capitalize.nav-para.text-white {
   font-weight: bold;
   line-height: normal;
   color: #2d2a2a;
+  height: 80px;
+  overflow: hidden;
 }
-
 button.bg-black.rounded-circle {
   height: 30px;
   width: 30px;
@@ -682,6 +683,42 @@ input:-webkit-autofill:active {
   height: 400px;
   overflow: hidden;
 }
+
+/* Career section styling start here */
+.carrer-container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.content-career {
+  width: 100%;
+  position: absolute;
+  z-index: 111;
+  bottom: 7%;
+  left: 0;
+  right: 0;
+}
+.career-stats-line {
+  white-space: normal;
+  line-height: 1.4;
+}
+h1.about-content.text-white {
+  text-align: center;
+  margin: auto;
+  font-size: 92px;
+}
+.sec-2-career {
+  background-color: #e0e0e0;
+  padding: 200px 100px;
+  place-items: center;
+}
+h1.about-content.text-black.fs-1 {
+  letter-spacing: 0px;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 55px !important;
+}
 /* Media query settlement  */
 @media screen and (max-width: 576px) {
   .sec-5-center-content {
@@ -742,5 +779,17 @@ input:-webkit-autofill:active {
   }
   .animated-about-image {
     bottom: -3rem;
+  }
+  .career-stats-line {
+    width: 90% !important;
+    max-width: 100%;
+  }
+  h1.about-content.text-white {
+    font-size: 60px;
+  }
+  h1.about-content.mx-auto {
+    font-size: 44px !important;
+    width: 100% !important;
+    letter-spacing: 2px;
   }
 }

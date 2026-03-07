@@ -10,6 +10,7 @@ import DetailService from "./DetailService";
 import ConnectPage from "./Contact";
 import News from "./News";
 import About from "./About";
+import Career from "./Career";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -20,6 +21,7 @@ createRoot(document.getElementById("root")).render(
       <Route path="/news" element={<News />} />
       <Route path="/detail/:service" element={<DetailService />} />
       <Route path="/about" element={<About />} />
+      <Route path="/career" element={<Career />} />
     </Routes>
   </BrowserRouter>,
 );
