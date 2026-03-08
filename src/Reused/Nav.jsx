@@ -240,8 +240,8 @@ const Nav = ({ navcolor }) => {
               <motion.li
                 className={`text-black fs-6 ${navcolor}`}
                 onMouseEnter={() => {
-                  setopenNavItem(true);
                   setservice(true);
+                  setopenNavItem(true);
                 }}
                 onMouseLeave={() => {
                   setopenNavItem(false);

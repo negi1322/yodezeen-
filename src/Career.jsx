@@ -6,8 +6,7 @@ import Footer from "./Reused/Footer";
 const Career = () => {
   const heroRef = useRef(null);
   const [jobimage, setJobImage] = useState("");
-  console.log("jobimage", jobimage);
-  console.log("jobimage", jobimage);
+
   const careerRole = [
     {
       title: "Concept Architect",
@@ -65,11 +64,9 @@ const Career = () => {
     offset: ["start start", "end start"],
   });
 
-  // ── Slide 1 — slower exit
   const s1Opacity = useTransform(scrollYProgress, [0, 0.25, 0.35], [1, 1, 0]);
   const s1Y = useTransform(scrollYProgress, [0, 0.35], [0, -80]);
 
-  // ── Slide 2 — slower in and out
   const s2Opacity = useTransform(
     scrollYProgress,
     [0.35, 0.5, 0.65, 0.72],
@@ -81,7 +78,6 @@ const Career = () => {
     [70, 0, 0, -70],
   );
 
-  // ── Slide 3 — appears slowly, stays until end
   const s3Opacity = useTransform(scrollYProgress, [0.72, 1, 1], [0, 1, 1]);
   const s3Y = useTransform(scrollYProgress, [1, 0.88, 1], [70, 0, 0]);
 
@@ -146,9 +142,13 @@ const Career = () => {
         <div className="d-flex gap-2 flex-column">
           {careerRole?.map((i, key) => (
             <div className="text-md-center" key={key}>
-              <h1
-                onClick={() => {
+              <motion.h1
+                onMouseEnter={() => {
                   setJobImage(i?.image);
+                }}
+                whileHover={{
+                  fontWeight: "bold",
+                  scale: 1.04,
                 }}
                 className={
                   jobimage
@@ -157,7 +157,7 @@ const Career = () => {
                 }
               >
                 {i?.title} <span className="fs-6 fw-light">{i?.location}</span>
-              </h1>
+              </motion.h1>
             </div>
           ))}
         </div>
