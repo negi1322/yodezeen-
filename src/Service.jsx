@@ -37,7 +37,7 @@ const Service = () => {
   ];
   return (
     <>
-      <Nav />
+      <Nav navbg={"bg-black"} />
 
       <div className="service-route-container pt100">
         <div className="px-3">

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-const Nav = ({ navcolor }) => {
+const Nav = ({ navcolor, navbg }) => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [openNavItem, setopenNavItem] = useState(false);
@@ -234,7 +234,7 @@ const Nav = ({ navcolor }) => {
       )}
 
       <div
-        className={"nav-bar"}
+        className={navbg ? `nav-bar ${navbg}` : "nav-bar"}
         style={{
           transform: navHidden ? "translateY(-100%)" : "translateY(0)",
           transition: "transform 0.4s ease",
