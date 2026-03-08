@@ -374,14 +374,13 @@ const Nav = ({ navcolor }) => {
                 <div className="container">
                   <div className="iteeem">
                     {[
-                      
-                      "Services",
                       "Contact",
                       "About",
                       "News",
                       "Career",
                       "Let's Talk",
-                      "Projects"
+                      "Projects",
+                      "Services",
                     ].map((item) => (
                       <div
                         onClick={() => {
