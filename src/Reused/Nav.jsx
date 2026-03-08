@@ -414,7 +414,7 @@ const Nav = ({ navcolor, navbg, navbgMobile }) => {
                 href="/"
                 className={
                   menuOpen
-                    ? "router-link-active router-link-exact-active logo-link bg-black p-2"
+                    ? "router-link-active router-link-exact-active logo-link bg-black p-3"
                     : "router-link-active router-link-exact-active logo-link"
                 }
               >

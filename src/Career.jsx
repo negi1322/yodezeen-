@@ -177,7 +177,7 @@ const Career = () => {
                 Let's talk
               </button>
             </div>
-            <div className="col-12 position-relative ">
+            <div className="col-12 ">
               <video
                 className="career-video img-fluid "
                 src="https://cdn.yodezeen.com/IMG_9669_30de72f373_f01ba45ed5.mp4"
