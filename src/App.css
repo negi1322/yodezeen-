@@ -124,6 +124,26 @@ svg {
   background-color: black;
 }
 
+@media (max-width: 768px) {
+  .nav-bar.nav-bg-mobile-white {
+    background-color: white !important;
+  }
+  .nav-bar.nav-bg-mobile-white .mobile-nav-icon {
+    color: #000 !important;
+    background-color: #f0f0f0;
+  }
+  .nav-bar.nav-bg-mobile-white .mobile-nav-icon .bi,
+  .nav-bar.nav-bg-mobile-white .mobile-nav-icon i {
+    color: #000 !important;
+  }
+  .nav-bar.nav-bg-mobile-white .logo path {
+    fill: #000 !important;
+  }
+  .nav-bar.nav-bg-mobile-white .bi-send {
+    color: #000 !important;
+  }
+}
+
 .main-home {
   overflow: hidden;
   height: 100vh;

@@ -37,8 +37,7 @@ const Service = () => {
   ];
   return (
     <>
-      <Nav navbg={"bg-black"} />
-
+      <Nav  navbgMobile="bg-white" />
       <div className="service-route-container pt100">
         <div className="px-3">
           <div className="text-uppercase text-black fs-1 text-center my-4 fw-bold">
