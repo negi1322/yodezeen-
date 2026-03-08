@@ -34,6 +34,10 @@ body {
   cursor: pointer;
 }
 
+.py-60 {
+  padding: 60px 0px;
+}
+
 .w-fit {
   width: fit-content !important;
 }
@@ -776,6 +780,45 @@ h1.about-content.text-black.fs-1 {
 .sec-7-flex-box {
   padding: 100px 0px;
 }
+
+/* Project styling start here */
+.project-container {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-image: url("https://cdn.yodezeen.com/extra_UP_Screenshot_20_c159c3b894.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.inside-map {
+  position: absolute;
+  top: 40%;
+  right: 25%;
+  display: flex;
+  flex-direction: column;
+}
+.project-big-image {
+  height: 200vh;
+  position: relative;
+  background-image: url("https://cdn.yodezeen.com/extra_UPLOA_Djpg_01_37f1fb3c86.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.project-video {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+.project-image {
+  background-image: url("https://cdn.yodezeen.com/extra_3_f8a2ad5d05.webp");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 /* Media query settlement  */
 @media screen and (max-width: 576px) {
   .sec-5-center-content {
@@ -886,5 +929,12 @@ h1.about-content.text-black.fs-1 {
   img.img-fluid.position-absolute.pointer {
     width: 32%;
     top: 100%;
+  }
+  .w-50.py-60 {
+    width: 100% !important;
+  }
+  h3.about-content.text-center.text-black {
+    font-size: 38px !important;
+    letter-spacing: 3px;
   }
 }

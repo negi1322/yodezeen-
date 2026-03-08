@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Nav = ({ navcolor }) => {
+  const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [openNavItem, setopenNavItem] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -44,6 +45,12 @@ const Nav = ({ navcolor }) => {
     }
   }, [openNavItem]);
 
+  useEffect(() => {
+    setAbout(false);
+    setservice(false);
+    setopenNavItem(false);
+  }, [location.pathname]);
+
   return (
     <>
       {/* Dropdown panel — stays open while mouse is inside it */}
@@ -58,7 +65,10 @@ const Nav = ({ navcolor }) => {
         className="nav-hover text-center"
         style={{ overflow: "hidden" }}
         onMouseEnter={() => setopenNavItem(true)}
-        onMouseLeave={() => setopenNavItem(false)}
+        onMouseLeave={() => {
+          setopenNavItem(false);
+          setservice(false);
+        }}
       >
         {service ? (
           <div
@@ -167,7 +177,10 @@ const Nav = ({ navcolor }) => {
           className="nav-hover text-center"
           style={{ overflow: "hidden" }}
           onMouseEnter={() => setopenNavItem(true)}
-          onMouseLeave={() => setopenNavItem(false)}
+          onMouseLeave={() => {
+            setopenNavItem(false);
+            setAbout(false);
+          }}
         >
           <div
             className="services-background-image"
@@ -240,12 +253,11 @@ const Nav = ({ navcolor }) => {
               <motion.li
                 className={`text-black fs-6 ${navcolor}`}
                 onMouseEnter={() => {
+                  setAbout(false);
                   setservice(true);
                   setopenNavItem(true);
                 }}
-                onMouseLeave={() => {
-                  setopenNavItem(false);
-                }}
+                onMouseLeave={() => setopenNavItem(false)}
                 onClick={() => navigate("/service")}
                 whileHover={{
                   color: "ffff",
@@ -295,6 +307,7 @@ const Nav = ({ navcolor }) => {
                 onMouseLeave={() => setopenNavItem(false)}
                 className={`text-black fs-6 ${navcolor}`}
                 onMouseEnter={() => {
+                  setservice(false);
                   setopenNavItem(true);
                   setAbout(true);
                 }}
@@ -409,7 +422,7 @@ const Nav = ({ navcolor }) => {
                   xmlns="http://www.w3.org/2000/svg"
                   version="1.1"
                   viewBox="0 0 1248.29 245.15"
-                  class="logo"
+                  className="logo"
                 >
                   <path
                     fill="#FAFAFA"

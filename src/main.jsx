@@ -12,6 +12,7 @@ import About from "./About";
 import TalkPage from "./LetTalk";
 import Career from "./Career";
 import Contact from "./Contact";
+import Project from "../Project";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -22,6 +23,7 @@ createRoot(document.getElementById("root")).render(
       <Route path="/news" element={<News />} />
       <Route path="/detail/:service" element={<DetailService />} />
       <Route path="/about" element={<About />} />
+      <Route path="/project" element={<Project />} />
       <Route path="/career" element={<Career />} />
       <Route path="/contact" element={<Contact />} />
     </Routes>
