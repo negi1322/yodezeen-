@@ -719,6 +719,24 @@ h1.about-content.text-black.fs-1 {
   font-weight: bolder;
   font-size: 55px !important;
 }
+.carrer-position-absolute {
+  position: absolute;
+  top: 20%;
+}
+
+/* Conatct page styling start here */
+.contact-container {
+  background-color: #ebeaea;
+}
+
+.gap-5.d-grid {
+  padding: 100px 0px;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.sec-7-flex-box{
+  padding: 100px 0px;
+}
 /* Media query settlement  */
 @media screen and (max-width: 576px) {
   .sec-5-center-content {
@@ -810,5 +828,20 @@ h1.about-content.text-black.fs-1 {
     height: 7vh;
     overflow: hidden;
     padding: 0px 0px 0px 20px;
+  }
+  h1.about-content.mx-auto {
+    font-size: 40px !important;
+  }
+  .carrer-position-absolute {
+    all: unset !important;
+  }
+  h1.about-content.text-black.fs-1 {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
+  .gap-5.d-grid {
+    padding: 0px;
+    grid-template-columns: 1fr 1fr !important;
   }
 }

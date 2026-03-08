@@ -69,7 +69,9 @@ const Nav = ({ navcolor }) => {
           >
             <div className="container">
               <div className="d-flex flex-column gap-1">
-                <span
+                <motion.span
+                  whileHover={{ scale: 1.3, color: "#ffff" }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
                   onMouseEnter={() =>
                     setServiceImage(
                       "https://cdn.yodezeen.com/extra_magnific_YJY_Rzy_Tlr1_Am_B_Ct9akp_K_magnific_y_Uxk_U_Th_A_Ej_It_RC_1w_Yuo_U_Screenshot_2024_09_13_094738_scaled_1_7644c3cd33.webp",
@@ -79,8 +81,10 @@ const Nav = ({ navcolor }) => {
                   className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
                 >
                   Hotels & Resorts
-                </span>
-                <span
+                </motion.span>
+                <motion.span
+                  whileHover={{ scale: 1.3, color: "#ffff" }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
                   onMouseEnter={() =>
                     setServiceImage(
                       "https://cdn.yodezeen.com/extra_3620s_GULFSTREAM_EXTERIOR_FINAL_16_04_9fd8c7a0dd.webp",
@@ -90,8 +94,10 @@ const Nav = ({ navcolor }) => {
                   className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
                 >
                   Private jets
-                </span>
-                <span
+                </motion.span>
+                <motion.span
+                  whileHover={{ scale: 1.3, color: "#ffff" }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
                   onMouseEnter={() =>
                     setServiceImage(
                       "https://cdn.yodezeen.com/extra_1_6_1e215fe69e.webp",
@@ -101,8 +107,10 @@ const Nav = ({ navcolor }) => {
                   className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
                 >
                   Public & Space
-                </span>
-                <span
+                </motion.span>
+                <motion.span
+                  whileHover={{ scale: 1.3, color: "#ffff" }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
                   onMouseEnter={() =>
                     setServiceImage(
                       "https://cdn.yodezeen.com/extra_ARCH_8sss6_bd57a53d88.webp",
@@ -112,8 +120,10 @@ const Nav = ({ navcolor }) => {
                   className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
                 >
                   Residence
-                </span>
-                <span
+                </motion.span>
+                <motion.span
+                  whileHover={{ scale: 1.3, color: "#ffff" }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
                   onMouseEnter={() =>
                     setServiceImage(
                       "https://cdn.yodezeen.com/extra_ely_bsc_photography_Eleonora_Boscarelli_043_1_1_8867e1f0e6.webp",
@@ -123,8 +133,10 @@ const Nav = ({ navcolor }) => {
                   className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
                 >
                   Restaurats
-                </span>
-                <span
+                </motion.span>
+                <motion.span
+                  whileHover={{ scale: 1.3, color: "#ffff" }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
                   onMouseEnter={() =>
                     setServiceImage(
                       "https://cdn.yodezeen.com/large_yacht_preview3_e349d25a7b.jpg",
@@ -134,7 +146,7 @@ const Nav = ({ navcolor }) => {
                   className={`services-content ${serviceImage ? "text-white" : "text-black"}`}
                 >
                   Yachts
-                </span>
+                </motion.span>
               </div>
             </div>
           </div>
@@ -302,12 +314,19 @@ const Nav = ({ navcolor }) => {
               >
                 Career
               </motion.li>
-              <li
+              <motion.li
+                whileHover={{
+                  color: "ffff",
+                  fontWeight: "bold",
+                  scale: 1.04,
+                  borderBottom: "2px solid white",
+                }}
+                onClick={() => navigate("/talk")}
                 className={`text-black fs-6 ${navcolor}`}
                 onMouseEnter={() => setopenNavItem(false)}
               >
                 Let's Talk
-              </li>
+              </motion.li>
             </ul>
           </div>
         </div>
@@ -395,6 +414,8 @@ const Nav = ({ navcolor }) => {
                     navigate("/about");
                   } else if (item === "Career") {
                     navigate("/career");
+                  } else if (item === "Let's Talk") {
+                    navigate("/Talk");
                   }
                 }}
                 key={item}

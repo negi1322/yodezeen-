@@ -145,7 +145,7 @@ const Career = () => {
       >
         <div className="d-flex gap-2 flex-column">
           {careerRole?.map((i, key) => (
-            <div className="text-center" key={key}>
+            <div className="text-md-center" key={key}>
               <h1
                 onClick={() => {
                   setJobImage(i?.image);
@@ -165,25 +165,30 @@ const Career = () => {
 
       <section className="bg-black py-3">
         <div className="container text-center">
-          <div className="d-flex flex-column gap-3">
-            <div className="text-center">
+          <div className=" flex-column gap-3 row position-relative">
+            <div className="text-center col-12 carrer-position-absolute">
               <h1
                 className="about-content  mx-auto"
                 style={{ fontSize: "70px", width: "60%" }}
               >
                 DID NOT FIND THE POSITION THAT WORKS FOR YOU?
               </h1>
-            </div>
-            <div>
               <button className="rounded-pill px-4 btn-light py-1">
                 Let's talk
               </button>
-              <h1 className="about-content text-white">yodezeen</h1>
+            </div>
+            <div className="col-12 position-relative ">
+              <video
+                className="career-video img-fluid "
+                src="https://cdn.yodezeen.com/IMG_9669_30de72f373_f01ba45ed5.mp4"
+                muted
+                autoPlay
+              ></video>
+              <div className="container position-md-absolute position-relative  bottom-0">
+                <Footer color={"text-white"} />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="container">
-          <Footer color={"text-white"} />
         </div>
       </section>
     </>

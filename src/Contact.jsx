@@ -1,168 +1,174 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-const ConnectPage = () => {
-  const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
-    code: "",
-    phone: "",
-    email: "",
-    message: "",
-  });
-  const [errors, setErrors] = useState({});
+import { motion } from "framer-motion";
+import Nav from "./Reused/Nav";
+import Footer from "./Reused/Footer";
 
-  const navigate = useNavigate();
-  const countryCodes = [
-    { code: "+1", country: "US" },
-    { code: "+44", country: "UK" },
-    { code: "+91", country: "IN" },
-    { code: "+971", country: "AE" },
-    { code: "+49", country: "DE" },
-    { code: "+33", country: "FR" },
-    { code: "+39", country: "IT" },
-    { code: "+34", country: "ES" },
-    { code: "+48", country: "PL" },
-    { code: "+380", country: "UA" },
+const Contact = () => {
+  const data = [
+    {
+      category: "General Inquiries",
+      email: "info@yodezeen.com",
+    },
+    {
+      category: "PR & Collaborations",
+      email: "pr@yodezeen.com",
+    },
+    {
+      category: "Careers",
+      email: "hr@yodezeen.com",
+    },
+    {
+      category: "Book Offline",
+      email: "info@yodezeen.com",
+    },
+    {
+      category: "Become a Supplier",
+      email: "suppliers@yodezeen.com",
+    },
+    {
+      category: "Development Partnership",
+      email: "partners@yodezeen.com",
+    },
   ];
-
-  const validate = () => {
-    const newErrors = {};
-    if (!form.firstName.trim()) newErrors.firstName = "Is a required field";
-    if (!form.email.trim()) newErrors.email = "Is a required field";
-    if (!form.phone.trim()) newErrors.phone = "Is a required field";
-    return newErrors;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newErrors = validate();
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-    } else {
-      setErrors({});
-      alert("Message sent!");
-    }
-  };
-
-  const handleChange = (field, value) => {
-    setForm((prev) => ({ ...prev, [field]: value }));
-    if (errors[field]) setErrors((prev) => ({ ...prev, [field]: "" }));
-  };
-
   return (
-    <div className="connect-overlay">
-      <button className="connect-close-btn" onClick={() => navigate("/")}>
-        CLOSE &nbsp; ✕
-      </button>
+    <>
+      <div className="contact-container">
+        <div>
+          <Nav />
+        </div>
 
-      <div className="connect-big-text d-md-block d-none">
-        <span className="connect-big-line">LET'S</span>
-        <span className="connect-big-line">CONNECT</span>
-      </div>
-
-      <div className="connect-form-wrapper">
-        <h2 className="connect-heading">
-          TELL US A LITTLE BIT ABOUT YOURSELF AND WE WILL GET BACK TO YOU AS
-          SOON AS WE CAN
-        </h2>
-
-        <form className="connect-form" onSubmit={handleSubmit}>
-          <div className="connect-field-group">
-            <label className="connect-label-red">
-              FIRST NAME*
-              {errors.firstName && (
-                <span className="connect-error-msg">{errors.firstName}</span>
-              )}
-            </label>
-            <input
-              type="text"
-              value={form.firstName}
-              onChange={(e) => handleChange("firstName", e.target.value)}
-              className={`connect-input ${errors.firstName ? "error" : ""}`}
-            />
-          </div>
-
-          <div className="connect-field-group">
-            <label className="connect-label-gray">LAST NAME</label>
-            <input
-              type="text"
-              value={form.lastName}
-              onChange={(e) => handleChange("lastName", e.target.value)}
-              className="connect-input"
-            />
-          </div>
-
-          <div className="connect-field-group">
-            <label className="connect-label-gray">
-              PHONE NUMBER*
-              {errors.phone && (
-                <span className="connect-error-msg">{errors.phone}</span>
-              )}
-            </label>
-            <div className="connect-phone-row">
-              <div className="connect-code-wrapper">
-                <label
-                  className="connect-label-gray"
-                  style={{ fontSize: "11px" }}
-                >
-                  CODE*
-                </label>
-                <select
-                  value={form.code}
-                  onChange={(e) => handleChange("code", e.target.value)}
-                  className="connect-select"
-                >
-                  <option value=""></option>
-                  {countryCodes.map((c) => (
-                    <option key={c.code} value={c.code}>
-                      {c.country} {c.code}
-                    </option>
-                  ))}
-                </select>
+        {/* Sec -7  */}
+        <section className="sec-7">
+          <div className="d-flex flex-column sec-7-flex-box">
+            <motion.h3
+              whileHover={{ height: "100%" }}
+              className="countrey-name"
+            >
+              London <span className="fs-6 text-start fw-light">12:09pm</span>
+              <div className="d-flex flex-column justify-content-between">
+                <p className="text-black fw-light fs-6 m-2">
+                  <span className="me-2">P.</span> +44 73 8888 9977
+                </p>
+                <p className="text-black fw-light fs-6 m-2">
+                  <span className="me-2">A.</span> 70 Brompton Road, London, SW3
+                  1ER, UK
+                </p>
               </div>
-              <input
-                type="tel"
-                value={form.phone}
-                onChange={(e) => handleChange("phone", e.target.value)}
-                className={`connect-input ${errors.phone ? "error" : ""}`}
-                style={{ flex: 1 }}
-              />
+            </motion.h3>
+            <motion.h3
+              whileHover={{ height: "100%" }}
+              className="countrey-name"
+            >
+              miammi <span className="fs-6 text-start fw-light">7:00pm</span>
+              <div className="d-flex flex-column justify-content-between">
+                <p className="text-black fw-light fs-6 m-2">
+                  <span className="me-2">P.</span> +44 73 8888 9977
+                </p>
+                <p className="text-black fw-light fs-6 m-2">
+                  <span className="me-2">A.</span> 70 Brompton Road, London, SW3
+                  1ER, UK
+                </p>
+              </div>
+            </motion.h3>
+            <motion.h3
+              whileHover={{ height: "100%" }}
+              className="countrey-name"
+            >
+              dubai <span className="fs-6 text-start fw-light">12:09pm</span>
+              <div className="d-flex flex-column justify-content-between">
+                <p className="text-black fw-light fs-6 m-2">
+                  <span className="me-2">P.</span> +44 73 8888 9977
+                </p>
+                <p className="text-black fw-light fs-6 m-2">
+                  <span className="me-2">A.</span> 70 Brompton Road, London, SW3
+                  1ER, UK
+                </p>
+              </div>
+            </motion.h3>
+            <motion.h3
+              whileHover={{ height: "100%" }}
+              className="countrey-name"
+            >
+              new york <span className="fs-6 text-start fw-light">12:09pm</span>
+              <div className="d-flex flex-column justify-content-between">
+                <p className="text-black fw-light fs-6 m-2">
+                  <span className="me-2">P.</span> +44 73 8888 9977
+                </p>
+                <p className="text-black fw-light fs-6 m-2">
+                  <span className="me-2">A.</span> 70 Brompton Road, London, SW3
+                  1ER, UK
+                </p>
+              </div>
+            </motion.h3>
+            <motion.h3
+              whileHover={{ height: "100%" }}
+              className="countrey-name"
+            >
+              warsaw <span className="fs-6 text-start fw-light">8:30pm</span>
+              <div className="d-flex flex-column justify-content-between">
+                <p className="text-black fw-light fs-6 m-2">
+                  <span className="me-2">P.</span> +44 73 8888 9977
+                </p>
+                <p className="text-black fw-light fs-6 m-2">
+                  <span className="me-2">A.</span> 70 Brompton Road, London, SW3
+                  1ER, UK
+                </p>
+              </div>
+            </motion.h3>
+            <motion.h3
+              whileHover={{ height: "100%" }}
+              className="countrey-name"
+            >
+              kyiv <span className="fs-6 text-start fw-light">12:09pm</span>
+              <div className="d-flex flex-column justify-content-between">
+                <p className="text-black fw-light fs-6 m-2">
+                  <span className="me-2">P.</span> +44 73 8888 9977
+                </p>
+                <p className="text-black fw-light fs-6 m-2">
+                  <span className="me-2">A.</span> 70 Brompton Road, London, SW3
+                  1ER, UK
+                </p>
+              </div>
+            </motion.h3>
+            <motion.h3
+              whileHover={{ height: "100%" }}
+              className="countrey-name"
+            >
+              milan <span className="fs-6 text-start fw-light">10:00pm</span>
+              <div className="d-flex flex-column justify-content-between">
+                <p className="text-black fw-light fs-6 m-2">
+                  <span className="me-2">P.</span> +44 73 8888 9977
+                </p>
+                <p className="text-black fw-light fs-6 m-2">
+                  <span className="me-2">A.</span> 70 Brompton Road, London, SW3
+                  1ER, UK
+                </p>
+              </div>
+            </motion.h3>
+          </div>
+        </section>
+        <section className="pt-5">
+          <div className="container-xxl">
+            <div className="gap-5 d-grid">
+              {data?.map((i, key) => (
+                <div key={key}>
+                  <p className="text-black fw-light fs-6 mb-0 ">
+                    {i?.category}
+                  </p>
+                  <p className="border-black text-black fw-light fs-5 border-bottom border-1 w-fit">
+                    {i?.email}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
+        </section>
 
-          <div className="connect-field-group">
-            <label className="connect-label-red">
-              EMAIL*
-              {errors.email && (
-                <span className="connect-error-msg">{errors.email}</span>
-              )}
-            </label>
-            <input
-              type="email"
-              value={form.email}
-              onChange={(e) => handleChange("email", e.target.value)}
-              className={`connect-input ${errors.email ? "error" : ""}`}
-            />
-          </div>
-
-          {/* Message */}
-          <div className="connect-field-group">
-            <label className="connect-label-gray">MESSAGE</label>
-            <textarea
-              value={form.message}
-              onChange={(e) => handleChange("message", e.target.value)}
-              rows={2}
-              className="connect-textarea"
-            />
-          </div>
-
-          <button type="submit" className="connect-submit-btn">
-            SEND MESSAGE
-          </button>
-        </form>
+        <div>
+          <Footer />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default ConnectPage;
+export default Contact;
