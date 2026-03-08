@@ -157,9 +157,7 @@ svg {
   }
 
   & button {
-    background-color: #d3d3d3 !important;
     font-size: 15px;
-    color: black;
   }
 }
 

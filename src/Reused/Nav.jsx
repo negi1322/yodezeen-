@@ -260,10 +260,14 @@ const Nav = ({ navcolor }) => {
                 onMouseLeave={() => setopenNavItem(false)}
                 onClick={() => navigate("/service")}
                 whileHover={{
-                  color: "ffff",
-                  fontWeight: "bold",
-                  scale: 1.04,
-                  borderBottom: "2px solid white",
+                  backgroundColor: "rgba(0, 0, 0, 0.85)",
+                  scale: 1.2,
+                  backdropFilter: "blur(10px)",
+                  color: "#FFFFFF",
+                }}
+                transition={{
+                  duration: 0.2,
+                  ease: "easeInOut",
                 }}
               >
                 Services

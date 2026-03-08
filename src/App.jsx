@@ -3,10 +3,12 @@ import { useRef } from "react";
 import Nav from "./Reused/Nav";
 import Center from "./Reused/Center";
 import Footer from "./Reused/Footer";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const containerRef = useRef(null);
   const sec6ref = useRef(null);
+  const navigate = useNavigate();
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
@@ -45,9 +47,22 @@ function Home() {
             <p className="p-0 m-0">Estepona, Spain</p>
           </div>
           <div className="d-flex justify-content-center ">
-            <button className=" rounded-pill p-2 text-black px-4 text-center mt-3 mt-md-0">
+            <motion.button
+              onClick={() => navigate("/project")}
+              whileHover={{
+                backgroundColor: "rgba(0, 0, 0, 0.85)",
+                scale: 1.2,
+                backdropFilter: "blur(10px)",
+                color: "#FFFFFF",
+              }}
+              transition={{
+                duration: 0.2,
+                ease: "easeInOut",
+              }}
+              className=" p-2 btn-dark px-4 text-center mt-3 mt-md-0"
+            >
               View Project
-            </button>
+            </motion.button>
           </div>
         </div>
 

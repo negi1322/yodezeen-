@@ -122,7 +122,7 @@ const Project = () => {
         style={{
           backgroundImage: `url(${"https://cdn.yodezeen.com/extra_2025_04_29_V1_P8_0d6d3d7f3c.webp"})`,
           height: "57vh",
-          backgroundPosition :"top"
+          backgroundPosition: "top",
         }}
       ></div>
     </>
