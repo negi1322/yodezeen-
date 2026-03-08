@@ -331,102 +331,137 @@ const Nav = ({ navcolor }) => {
           </div>
         </div>
 
-        <div className="d-flex d-md-none justify-content-between align-items-center py-3 px-3">
-          <div>
-            <img
-              onClick={() => navigate("/")}
-              src="https://yodezeen.com/icons/logo.svg"
-              alt=""
-              className="img-fluid position-absolute w-25 pointer"
-            />
-          </div>
-
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="border-0 bg-transparent p-0 "
-            aria-label="Toggle menu"
-            style={{ cursor: "pointer" }}
-          >
-            <div
-              style={{
-                width: "25px",
-                height: "2px",
-                backgroundColor: "#000",
-                margin: "5px 0",
-                transition: "all 0.3s ease",
-                transform: menuOpen
-                  ? "rotate(45deg) translate(5px, 5px)"
-                  : "none",
-              }}
-            />
-            <div
-              style={{
-                width: "25px",
-                height: "2px",
-                backgroundColor: "#000",
-                margin: "5px 0",
-                transition: "all 0.3s ease",
-                opacity: menuOpen ? 0 : 1,
-              }}
-            />
-            <div
-              style={{
-                width: "25px",
-                height: "2px",
-                backgroundColor: "#000",
-                margin: "5px 0",
-                transition: "all 0.3s ease",
-                transform: menuOpen
-                  ? "rotate(-45deg) translate(5px, -5px)"
-                  : "none",
-              }}
-            />
-          </button>
-        </div>
-
-        <div
-          style={{
-            maxHeight: menuOpen ? "400px" : "0",
-            overflow: "hidden",
-            transition: "max-height 0.3s ease",
-          }}
-          className="d-md-none"
-        >
-          <ul className="list-unstyled m-0 px-3 pb-3">
-            {[
-              "Projects",
-              "Services",
-              "Contact",
-              "About",
-              "News",
-              "Career",
-              "Let's Talk",
-            ].map((item) => (
-              <li
-                onClick={() => {
-                  if (item === "Services") {
-                    navigate("/service");
-                  } else if (item === "Contact") {
-                    navigate("/contact");
-                  } else if (item === "News") {
-                    navigate("/news");
-                  } else if (item === "About") {
-                    navigate("/about");
-                  } else if (item === "Career") {
-                    navigate("/career");
-                  } else if (item === "Let's Talk") {
-                    navigate("/Talk");
-                  }
-                }}
-                key={item}
-                className="text-capitalize nav-para text-white py-2"
-                style={{ borderBottom: "1px solid #eee" }}
+        {/* For mobile */}
+        <div className="container-xxl d-md-none d-block ">
+          <div className="row justify-content-between align-items-center">
+            <div className="col-2">
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className=" mobile-nav-icon pointer"
+                aria-label="Toggle menu"
               >
-                {item}
-              </li>
-            ))}
-          </ul>
+                <i
+                  className={
+                    menuOpen ? "bi bi-list fs-3 text-black" : "bi bi-list fs-3"
+                  }
+                ></i>
+              </button>
+              <div
+                className="nav-item-container"
+                style={{
+                  maxHeight: menuOpen ? "100vh" : "0",
+                  overflow: "hidden",
+                  transition: "max-height 0.3s ease",
+                }}
+              >
+                <div className="container">
+                  <div className="iteeem">
+                    {[
+                      "Projects",
+                      "Services",
+                      "Contact",
+                      "About",
+                      "News",
+                      "Career",
+                      "Let's Talk",
+                    ].map((item) => (
+                      <div
+                        onClick={() => {
+                          if (item === "Services") {
+                            navigate("/service");
+                          } else if (item === "Contact") {
+                            navigate("/contact");
+                          } else if (item === "News") {
+                            navigate("/news");
+                          } else if (item === "About") {
+                            navigate("/about");
+                          } else if (item === "Career") {
+                            navigate("/career");
+                          } else if (item === "Let's Talk") {
+                            navigate("/Talk");
+                          }
+                        }}
+                        key={item}
+                        className="text-black about-content"
+                        style={{ fontSize: "40px" }}
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-6">
+              <a
+                data-v-f87b65f2=""
+                aria-current="page"
+                href="/"
+                className={
+                  menuOpen
+                    ? "router-link-active router-link-exact-active logo-link bg-black p-2"
+                    : "router-link-active router-link-exact-active logo-link"
+                }
+              >
+                <svg
+                  data-v-f87b65f2=""
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.1"
+                  viewBox="0 0 1248.29 245.15"
+                  class="logo"
+                >
+                  <path
+                    fill="#FAFAFA"
+                    d="M55.21,241.35v-86.15L2,3.8h44.66l31.36,98.19L109.37,3.8h44.67l-53.22,151.4v86.15h-45.61Z"
+                  ></path>
+                  <path
+                    fill="#FAFAFA"
+                    d="M166.67,162.8v-80.45C166.67,27.24,194.86,0,241.11,0s74.43,27.24,74.43,82.35v80.45c0,55.42-28.19,82.34-74.43,82.34s-74.43-26.92-74.43-82.34ZM269.61,163.74v-82.34c0-31.05-10.76-41.18-28.5-41.18s-28.51,10.13-28.51,41.18v82.34c0,31.05,10.45,41.18,28.51,41.18s28.5-10.13,28.5-41.18Z"
+                  ></path>
+                  <path
+                    fill="#FAFAFA"
+                    d="M494.03,83.61v77.92c0,53.21-28.19,79.82-74.43,79.82h-71.27V3.8h71.27c46.24,0,74.43,26.61,74.43,79.82ZM448.1,162.17v-79.19c0-29.13-10.76-38.64-28.5-38.64h-25.35v156.47h25.35c17.73,0,28.5-9.51,28.5-38.64Z"
+                  ></path>
+                  <path
+                    fill="#FAFAFA"
+                    d="M638.53,241.35h-113.71V3.8h113.71v40.54h-68.1v55.11h61.77v40.54h-61.77v60.81h68.1v40.54Z"
+                  ></path>
+                  <path
+                    fill="#FAFAFA"
+                    d="M741.63,44.34h-78.55V3.8h121.94v50.05l-80.14,146.96h83.31v40.54h-126.69v-50.05l80.13-146.96Z"
+                  ></path>
+                  <path
+                    fill="#FAFAFA"
+                    d="M925.62,241.35h-113.71V3.8h113.71v40.54h-68.1v55.11h61.77v40.54h-61.77v60.81h68.1v40.54Z"
+                  ></path>
+                  <path
+                    fill="#FAFAFA"
+                    d="M1069.37,241.35h-113.71V3.8h113.71v40.54h-68.1v55.11h61.77v40.54h-61.77v60.81h68.1v40.54Z"
+                  ></path>
+                  <path
+                    fill="#FAFAFA"
+                    d="M1209.02,206.83V3.8h39.27v237.55h-70.31l-39.28-205.88v205.88h-39.27V3.8h70.32l39.27,203.03Z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+            <div className="col-2 pointer">
+              <button
+                onClick={() => navigate("/contact")}
+                className="mobile-nav-icon"
+              >
+                <i
+                  className={
+                    menuOpen ? "text-black bi bi-send fs-6" : "bi bi-send fs-6"
+                  }
+                ></i>
+              </button>
+            </div>
+          </div>
         </div>
+
+        <div></div>
       </div>
     </>
   );
