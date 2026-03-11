@@ -8,14 +8,13 @@ import database from "./Data/Images.json";
 const DetailService = () => {
   const { service } = useParams();
   const [changeImages, setChangeImages] = useState(0);
-  console.log("data ise", database);
+
   const SameData = database?.filter((i) => i?.serviceName === service);
   const image = SameData?.[0]?.loopImage;
   const images = [];
-  for (let a = 0; a < image?.length; a++) {
-    images?.push(image[a]);
+  for (let a of image) {
+    images?.push(a);
   }
-  console.log("images", images);
   useEffect(() => {
     const interval = setInterval(() => {
       setChangeImages((prev) => (prev + 1) % images.length);
@@ -97,10 +96,12 @@ const DetailService = () => {
                   padding: "400px 0px",
                 }}
               >
-                <div class=" text-white position-absolute bottom-0 mb-4 ">
-                  <p class="small text-uppercase mb-2">Tbilisi, Georgia</p>
-                  <p class="fw-bold display-2 text-uppercase fs-1">Art Hotel</p>
-                  <button class="btn rounded-pill px-4 py-2 mt-3 bg-light text-dark">
+                <div className=" text-white position-absolute bottom-0 mb-4 ">
+                  <p className="small text-uppercase mb-2">Tbilisi, Georgia</p>
+                  <p className="fw-bold display-2 text-uppercase fs-1">
+                    Art Hotel
+                  </p>
+                  <button className="btn rounded-pill px-4 py-2 mt-3 bg-light text-dark">
                     View Project
                   </button>
                 </div>
@@ -118,10 +119,12 @@ const DetailService = () => {
                   padding: "400px 0px",
                 }}
               >
-                <div class=" text-white position-absolute bottom-0 mb-4">
-                  <p class="small text-uppercase mb-2">Tbilisi, Georgia</p>
-                  <p class="fw-bold display-2 text-uppercase fs-1">Art Hotel</p>
-                  <button class="btn rounded-pill px-4 py-2 mt-3 bg-light text-dark">
+                <div className=" text-white position-absolute bottom-0 mb-4">
+                  <p className="small text-uppercase mb-2">Tbilisi, Georgia</p>
+                  <p className="fw-bold display-2 text-uppercase fs-1">
+                    Art Hotel
+                  </p>
+                  <button className="btn rounded-pill px-4 py-2 mt-3 bg-light text-dark">
                     View Project
                   </button>
                 </div>
